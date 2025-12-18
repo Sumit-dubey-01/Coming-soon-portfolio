@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon Portfolio</title>
+  <style>
+    /* --- BASIC PAGE SETUP --- */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    /* --- SIMPLE ANIMATION BACKGROUND --- */
+    .glow {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background: rgb(109, 187, 102);
+      filter: blur(120px);
+      border-radius: 50%;
+      animation: float 6s infinite alternate;
+      /* z-index: -1; */
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-40px); }
+    }
+
+    /* --- IMAGE --- */
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 20px;
+    }
+
+    /* --- BUTTON --- */
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 1px solid rgb(41, 247, 14);
+      color: white;
+      background: transparent;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .skills {
+       text-decoration: cornflowerblue;
+    } 
+
+    .btn:hover {
+      background: white;
+      color: black;
+    }
+    /* --- FADE-IN ANIMATION --- */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Apply fade animation to main elements */
+    .fade {
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    /* --- Coming Soon Bounce Animation --- */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .bounce {
+      animation: bounce 2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated background circle -->
+  <div class="glow"></div>
+
+  <!-- Profile Photo (Replace photo.jpg with your own image) -->
+    <img class="fade" src="port.jpg" alt="Your Photo" />
+
+  <!-- Name & Title -->
+    <h1 class="fade">Sumit Dubey</h1>
+  <p style="font-size: 20px; text-decoration: rgb(0, 255, 255); " >2nd Year • Computer Science Student</p>
+  <p style="font-size: 20px;" >Web Developer | Learner | Coder</p>
+
+  <!-- Coming Soon Text -->
+    <h1 class="bounce fade" style="margin-top: 20px; font-size: 40px;">🚀 Portfolio Coming Soon</h1>
+
+  <!-- Button -->
+  <button class="btn" onclick="notify()">Notify Me</button>
+
+  <!-- Simple JS Popup -->
+  <script>
+    function notify() {
+      alert("Thanks! You will be notified when the portfolio launches.");
+    }
+  </script>
+
+</body>
+</html>
